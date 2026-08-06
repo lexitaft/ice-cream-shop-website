@@ -1,0 +1,149 @@
+#main-heading {
+    color: hotpink;
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Clicker Script', cursive;
+}
+
+.secondheading {
+    color: deeppink;
+    text-align: center;
+    font-family: 'Clicker Script', cursive;
+}
+
+.thirdheading {
+    color: pink;
+    text-align: center;
+    font-family: 'Clicker Script', cursive;
+}
+.paragraphStyle {
+    color: purple;
+    text-align: center;
+    align-content: center;
+    font-size: medium;
+    font-family: 'Arial', sans-serif;
+}
+
+.img {
+    border: 5px solid purple;
+    margin: 0 10px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: hotpink;
+}
+
+.figure {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-size: cover;
+    background-color: lightyellow;
+    color: purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+blockquote {
+    background-color: purple;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0;
+}
+button {
+    background-color: deeppink;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: purple;
+}
+
+script {
+    align-content: center;
+}
+header {
+    background-color: pink;
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%; /* Make the navbar span the whole width */
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffcc;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: purple;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+
+#attractionsList {
+    display: none;
+}
+
+#attractionshold,
+#maphold {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+#openMapButton {
+    background-color: #ff4081;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#openMapButton:hover {
+    background-color: #d81b60;
+}

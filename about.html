@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href='https://fonts.googleapis.com/css?family=Clicker Script' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Luckiest Guy' rel='stylesheet'>
+<style>
+    body {
+        background-color: lightgoldenrodyellow;
+        margin: 12px;
+        padding: 6px;
+    }
+
+        h1 {
+            color: #F0C1ED;
+            font-family:'Arial', sans-serif;
+        }
+       .font{
+           color:hotpink;
+           font-family: cursive;
+           font-size: 22px;
+       }
+       .fontSize{
+           font-size: 30px;
+           color: purple;
+           font-family: cursive;
+           }
+
+    .content{
+        padding: 20px;
+    }
+    /*add some basic styling*/
+    table{
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px auto;
+    }
+    table th, td{
+    border: 1px solid black;
+    }
+    th, td{
+    padding: 10px;
+    text-align: left;
+    }
+    /*hide the dropdown menu by default*/
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 18px 20px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+        white-space: pre; /*Preserve white space-including line breaks*/
+        padding: 10px;
+        line-height: 25px;
+    }
+    /*style the dropdown button*/
+    .dropdown{
+    position: relative;
+    display: inline-block;
+    }
+    .dropdown:hover .dropdown-content{
+    display: block;
+    }
+    .dropdown label {
+        margin-right: 20px;
+        font-size:30px;
+        font-family: 'cursive';
+
+    }
+.dropdown-content select:hover,
+.dropdown-content select:focus {
+    background-color: #ddd;
+}
+
+    header {
+        background-color: pink;
+        padding: 10px 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .navbar {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 100%; /* Make the navbar span the whole width */
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar li {
+        margin: 0 15px;
+        display: inline;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: #ffffcc;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+        color: purple;
+    }
+
+    </style>
+
+</head>
+<body>
+<header>
+    <!--Create the Navigation bar-->
+    <nav class="navbar">
+        <ul>
+            <li><a href="final.html">Home</a></li>
+            <li><a href= about.html>About</a></li>
+            <li><a href="Where.html">Where</a></li>
+            <li><a href="game.html">Game</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="content">
+<h1>About</h1>
+<p class="font">We are a ice cream shop wanting to make people happy, smile, bring good vibes, and bring sunshine into one's day!
+    We offer a wide variety of options including homemade bubble tea, popsicles, ice cream bars, smoothies, sorbets,
+    frozen yogurt, and cake.</p>
+<br>
+<p class="font"> We are the best ice cream shop in Florida because we are unique, provide the best quality, and our ingredients are
+    all fairly traded and sourced. We have also been featured in magazines such as "The New York Times", bon appetit, TIME, and Forbes; in
+    addition to being named the best ice cream shop in Florida by WCVB 5.</p>
+<br>
+<p class="font"> We provide the best service because we truly care about our customers and the environment.
+    Our waste is converted into electricity powering machines and lights.
+    One percent of our profits go to providing school supplies to children who are less fortunate.</p>
+</div>
+<div class="dropdown">
+    <p class="fontSize"> Hover over select item to see menu!</p>
+    <label for="itemSelect">SELECT ITEM:</label>
+    <div class="dropdown-content" id="itemDropdown">
+        <select id= "itemSelect" onchange="showCost(this.value)">
+            <optgroup label="ice cream">
+        <option value= "gratitude_small" data-price = "2" data-description= "lychee ice cream" > gratitude - small </option>
+        <option value="gratitude_medium" data-price = "4" data-description= "lychee ice cream"> gratitude - medium </option>
+        <option value="gratitude_large" data-price = "6" data-description= "lychee ice cream"> gratitude - large </option>
+        <option value= "good_vibes_small" data-price = "2" data-description= "lavender ice cream"> good vibes - small </option>
+        <option value="good vibes_medium" data-price = "4" data-description= "lavender ice cream"> good vibes - medium </option>
+        <option value="good vibes_large" data-price = "6" data-description= "lavender ice cream"> good vibes - large </option>
+        <option value="red roses_small" data-price = "2" data-description= "red rose ice cream"> red roses - small </option>
+        <option value="red roses_medium" data-price = "4" data-description= "red rose ice cream"> red roses - medium </option>
+        <option value="red roses_large" data-price = "6" data-description= "red rose ice cream"> red roses-large </option>
+        <option value="meditate_small" data-price = "2" data-description= "mangosteen ice cream"> meditate - small </option>
+        <option value="meditate_medium" data-price = "4" data-description= "mangosteen ice cream"> meditate - medium </option>
+        <option value="meditate_large" data-price="6" data-description="mangosteen ice cream"> meditate - large </option>
+        <option value="joy_small" data-price="2" data-description="rainbow flavored ice cream"> joy - small </option>
+        <option value="joy_medium" data-price="4" data-description="rainbow flavored ice cream"> joy - medium </option>
+        <option value="joy_large" data-price="6" data-description="rainbow flavored ice cream"> joy - large </option>
+        </optgroup>
+            <optgroup label="bubble tea">
+                <option value="bubble pink_small" data-price="2" data-description="mirabelle flavored bubble tea"> bubble pink - small</option>
+                <option value="bubble pink_medium" data-price="4" data-description="mirabelle flavored bubble tea"> bubble pink - medium</option>
+                <option value="bubble pink_large" data-price="6" data-description="mirabelle flavored bubble tea"> bubble pink- large</option>
+                <option value="euphoria_small" data-price="2" data-description="sunshine flavored bubble tea"> euphoria - small</option>
+                <option value="euphoria_medium" data-price="4" data-description="sunshine flavored bubble tea">euphoria - medium</option>
+                <option value ="euphoria_large" data-price="6" data-description="sunshine flavored bubble tea">euphoria - large</option>
+                      </optgroup>
+            <optgroup label="milkshakes">
+                <option value="sweetheart_small" data-price="2" data-description="strawberry milkshake"> sweetheart - small</option>
+                <option value="sweetheart_medium" data-price="4" data-description="strawberry milkshake"> sweetheart - medium</option>
+                <option value="sweetheart_large" data-price="6" data-description="strawberry milkshake"> sweetheart - large</option>
+                <option value="lover_small" data-price="2" data-description="raspberry milkshake"> lover - small</option>
+                <option value="lover_medium" data-price="4" data-description="raspberry milkshake">lover - medium</option>
+                <option value="lover_large" data-price="6" data-description="raspberry milkshake">lover - large</option>
+                <option value="think later_small" data-price="2" data-description="red velvet milkshake"> think later - small</option>
+                <option value="think later_medium" data-price="4" data-description="red velvet milkshake"> think later - medium</option>
+                <option value="think later_large" data-price="6" data-description="red velvet milkshake"> think later - large</option>
+            </optgroup>
+            <optgroup label="frozen yogurt">
+                <option value="kindness_small" data-price="2" data-description="blackberry frozen yogurt"> kindness - small</option>
+                <option value="kindness_medium" data-price="4" data-description="blackberry frozen yogurt"> kindness -  medium</option>
+                <option value="kindness_large" data-price="6" data-description="blackberry frozen yogurt"> kindness - large</option>
+            </optgroup>
+        </select>
+    </div>
+
+<h1>Selected Item Details</h1>
+<table id="selectedItemTable">
+    <thead>
+    <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- table body will be updated dynamically-->
+    </tbody>
+</table>
+</div>
+
+<script>
+    function showCost(selectedValue) {
+        let selectedItem = document.querySelector(`[value="${selectedValue}"]`);
+        let price = selectedItem.getAttribute('data-price');
+        let description = selectedItem.getAttribute('data-description');
+        console.log(`Selected Item: ${selectedValue}, Price: ${price}, Description: ${description}`)
+
+
+// Update table dynamically
+        let table = document.getElementById('selectedItemTable');
+        let newRow = table.insertRow(table.rows.length);
+        let cell1 = newRow.insertCell(0);
+        let cell2 = newRow.insertCell(1);
+        let cell3 = newRow.insertCell(2);
+
+        cell1.innerHTML = selectedValue;
+        cell2.innerHTML = `${price}`;
+        cell3.innerHTML = description;
+    }
+
+
+        //Hide the dropdown menu after displaying an item//
+       // document.getElementById("itemDropdown").style.display="none";//
+
+</script>
+
+</body>
+</html>

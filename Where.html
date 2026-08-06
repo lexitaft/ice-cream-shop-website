@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="HomeStyle.css">
+  <title>Where We Are Located</title>
+</head>
+
+
+<body class="body">
+
+<section id="Where we are located">
+  <h1 id="main-heading">Where We Are Located</h1>
+
+<!--create the navigation bar-->
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="final.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="Where.html">Where</a></li>
+        <li><a href="../game.html">Game</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!--Location description-->
+  <h2 class="thirdheading">Our Location</h2>
+  <p class="paragraphStyle">We are located in Central Florida! Visit us and indulge in the sunshine flavors of our ice cream treats!
+    Use the map below to find directions to our shop!</p>
+
+<!--Map placement-->
+  <div id="maphold">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28260.774265362347!2d-81.37931993798829!3d28.53833554846192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77a9346b7d977%3A0x9e98f10d0cfab3de!2sOrlando%2C%20FL%2C%20USA!5e0!3m2!1sen!2sca!4v1631878740461!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <button id="openMapButton" onclick="openMap()">Open Map fullscreen in New Window</button>
+  </div>
+
+<!--Attraction Placement-->
+  <div id="attractionshold">
+    <h2 class="secondheading">Attractions Near Us!</h2>
+    <p>If you are looking to make the trip to our shop please consider visiting these awesome attractions
+      below! If you are looking to get a second helping you will find some of our smaller stands at these locations!</p>
+
+
+    <!--Create button that activates the click attractions function-->
+    <button onclick="clickAttractions()">Show Nearby Attractions</button>
+    <ul id="attractionsList"></ul>
+  </div>
+
+  <script>
+
+
+    <!--Create function for when user clicks button for user clicks attractions-->
+    <!--Hides or shows the the list of the attractions when the button is clicked-->
+    function clickAttractions() {
+      let attractionsList = document.getElementById('attractionsList');
+      attractionsList.style.display = (attractionsList.style.display === 'none') ? 'block' : 'none';
+    }
+
+    <!--Opens the link to the new browser when user clicks the button-->
+    function openMap() {
+      window.open("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28260.774265362347!2d-81.37931993798829!3d28.53833554846192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77a9346b7d977%3A0x9e98f10d0cfab3de!2sOrlando%2C%20FL%2C%20USA!5e0!3m2!1sen!2sca!4v1631878740461!5m2!1sen!2sca");
+    }
+
+  <!--Create array that stores the names of all the attractions-->
+    let nearbyAttractions = ["Rapid Slides Waterpark", "Mountain Splash Park", "Smith's Petting Zoo", "Amusement Park", "Roseland Bowl"];
+
+    <!--Create the for loop-->
+    <!--loop is iterating over the array-->
+    <!--creates a new list item for each element in the array-->
+    for (let i = 0; i < nearbyAttractions.length; i++) {
+      let listItem = document.createElement('li');
+      listItem.textContent = nearbyAttractions[i];
+      document.getElementById('attractionsList').appendChild(listItem);
+    }
+  </script>
+</section>
+
+</body>
+</html>
+
