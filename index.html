@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="HomeStyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sunshine Ice Cream Shop</title>
+</head>
+<body class="body">
+<h2 class="secondheading">Lexi & Meimei's</h2>
+<blockquote>
+    <h1 id="main-heading">Sunshine Ice Cream Shop</h1>
+</blockquote>
+
+
+<header>
+    <!--Create the Navigation bar-->
+    <nav class="navbar">
+        <ul>
+            <li><a href="final.html">Home</a></li>
+            <li><a href="../about.html"></a></li>
+            <li><a href="Where.html">Where</a></li>
+            <li><a href="../game.html">Game</a></li>
+        </ul>
+    </nav>
+</header>
+
+<p class="paragraphStyle">Sunshine Ice Cream Shop, located in central Florida, is the BEST place to buy your next cone. We offer
+    so many delicious flavors and ensure that no matter age you will never leave disappointed. While being Florida's
+    number one rated ice cream shop does come with tremendous pressure, we promise to never let you down. There is
+    a menu item for everyone! Come on down and see for yourself</p>
+
+
+<!--three photos center of page-->
+<figure class="figure">
+    <img class="img" src="icecream1.jpg" height="294" width="400" >
+    <img class="img" src="icecream5.jpg" height="294" width="200">
+    <img class="img" src="icecream4.jpg" height="294" width="400">
+</figure>
+
+<!--Button showing the hours for that day-->
+<h2 class="secondheading">Check below to see our hours for today</h2>
+
+
+<label for="dayInput" class="secondheading">Enter Today's Day:</label>
+<br>
+<input type="text" id="dayInput" placeholder="ex: Monday">
+<br>
+
+<!--when clicked will call the function-->
+<button onclick="checkOpenHours()">Check Hours</button>
+
+<!--display the checkoopenhours func-->
+<div id="hours"></div>
+<script>
+
+    <!--When page finishes loading will call the function-->
+    <!--function that runs on load-->
+    window.onload = function() {
+        showFlavorOfTheMonthDialog();
+    };
+
+    <!--function that shows the flavor of the month for dialog box-->
+    function showFlavorOfTheMonthDialog() {
+        const flavorOfTheMonth = "Strawberries & Cream";
+        const dialogMessage = `FLAVOR OF THE MONTH!: ${flavorOfTheMonth}! Limited-time only.`;
+
+        <!--alert pops up when page is done loading-->
+        window.alert(dialogMessage);
+    }
+
+
+    <!--two ARRAYS with the days of the week and their corresponding hours for those days-->
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const openHours = [
+        "11:00AM - 9:00 PM",
+        "11:00 AM - 9:00 PM",
+        "11:00 AM - 9:00 PM",
+        "11:00 AM - 9:00 PM",
+        "11:00 AM - 9:00 PM",
+        "11:00 AM - 11:00 PM",
+        "11:00 AM - 11:00 PM",
+    ];
+
+    <!--Create function for checking the open hours-->
+    function checkOpenHours() {
+        const userInput = document.getElementById('dayInput').value.trim().toLowerCase();
+        const dayIndex = daysOfWeek.findIndex(day => day.toLowerCase() === userInput);
+
+
+    <!--conditional expression checking if the user-input is valid-->
+        <!--will print the hours for the day entered if it is an option...if not valid will notify and request to enter a different accurate day-->
+        if (dayIndex !== -1) {
+            const openHoursMessage = openHours[dayIndex];
+            document.getElementById('hours').innerHTML = `<h2 class="secondheading">Hours on ${daysOfWeek[dayIndex]}:</h2><p>${openHoursMessage}</p>`;
+        } else {
+            document.getElementById('hours').innerHTML = '<p class="paragraphStyle">Not a valid day of the week. Please enter a day of the week.</p>';
+        }
+    }
+</script>
+
+</body>
+</html>
