@@ -1,55 +1,66 @@
 # Ice Cream Shop Website
 
-A responsive, multi-page website for a fictional ice cream shop built using **HTML, CSS, JavaScript, and Bootstrap**.
+A responsive, multi-page website for a fictional ice cream shop built using **HTML5, CSS3, JavaScript, and Bootstrap**.
 
 ## Project Overview
 
-This website was originally created as the **final project for my World Wide Web course** to demonstrate the front-end web development concepts and skills I learned throughout the class.
+This website was originally developed as the **Final Project for my World Wide Web course (CS 213)** in Fall 2023. The original assignment focused on applying front-end web development concepts learned throughout the course to design and build a responsive restaurant website.
 
-The project combines HTML page structure, custom CSS styling, Bootstrap components, and JavaScript functionality to create an interactive website for a fictional ice cream shop. The site includes multiple connected pages where users can explore the shop, view menu options, find location information, check store hours, and play a browser-based game.
+For my project, I created a fictional ice cream shop with multiple connected pages that allow users to learn about the shop, explore menu options, check store hours, and view location information.
+
+I later revisited and refined the project for my GitHub portfolio by cleaning up some of the code, improving the site organization, and removing elements that were included solely to meet the original course requirements.
 
 ## Features
 
 - Multi-page website with consistent navigation
 - Responsive page layouts
-- Interactive ice cream menu
+- Interactive menu with size and flavor selections
+- Dynamic pricing based on selected size
+- Flavor descriptions displayed based on user selection
 - Store hours lookup based on user input
 - Flavor of the Month alert
-- Embedded Google Map for shop location
-- Browser-based game built with JavaScript and HTML Canvas
+- Location information with an embedded Google Map
 - Dynamic webpage updates using JavaScript and DOM manipulation
 
 ## Technologies Used
 
-### HTML
-Used to structure the website and create the individual pages, navigation, headings, text, images, buttons, input fields, and game canvas.
+### HTML5
 
-### CSS
-Used to customize the visual appearance of the website, including typography, colors, navigation, spacing, images, and page layouts.
+Used to structure the website and organize content across multiple pages. HTML elements are used for navigation, headings, text, images, menu selections, user inputs, buttons, and other page content.
+
+### CSS3
+
+Used to create the visual design and branding of the fictional ice cream shop, including colors, typography, navigation styling, spacing, images, and page layouts.
 
 ### JavaScript
-Used to add interactivity and dynamic functionality throughout the website. This includes handling user input, displaying store hours, generating the Flavor of the Month alert, manipulating webpage content through the DOM, and powering the browser-based game.
+
+Used to add interactivity and dynamic functionality to the website. JavaScript handles user input, conditional logic, menu selections, store-hour lookup, dynamic content updates, and DOM manipulation.
+
+Examples include:
+- Enabling flavor selection after a user chooses a size
+- Dynamically displaying a selected flavor's description and price
+- Looking up store hours based on a user's input
+- Displaying a Flavor of the Month message when the homepage loads
 
 ### Bootstrap
-Used alongside custom CSS to support responsive layouts and provide reusable styling and layout components.
 
-## JavaScript Functionality
-
-The project uses JavaScript for several interactive features. Users can enter a day of the week to dynamically retrieve the shop's corresponding business hours without navigating to another page. JavaScript also displays a Flavor of the Month message when the homepage loads.
-
-The Game page uses JavaScript and HTML Canvas to create a playable browser game with player movement, obstacles, collision detection, scoring, and continuous game updates.
+Used alongside custom CSS to support responsive web design and help organize content across different screen sizes.
 
 ## Skills Demonstrated
 
-- Front-end web development
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
 - Responsive web design
 - Multi-page website development
-- HTML structure and navigation
-- CSS styling and layouts
 - JavaScript functions
 - Arrays and conditional logic
 - User input handling
 - DOM manipulation
 - Event handling
-- HTML Canvas
-- Basic browser game development
+- Dynamic webpage content
+
+## Project Background
+
+This project was originally completed in **Fall 2023 for CS 213: World Wide Web**. The course assignment challenged students to apply HTML5, CSS3, JavaScript, Bootstrap, responsive design, and interactive web development concepts covered throughout the semester.
