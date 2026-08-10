@@ -147,3 +147,50 @@ header {
 #openMapButton:hover {
     background-color: #d81b60;
 }
+
+/* Menu page */
+
+.menu-selection {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 500px;
+}
+
+.menu-selection label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: hotpink;
+    font-weight: bold;
+}
+
+.menu-selection select {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid pink;
+    border-radius: 5px;
+    background-color: white;
+    color: purple;
+}
+
+.menu-selection select:focus {
+    outline: none;
+    border-color: deeppink;
+}
+
+.menu-selection select:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#selectionDetails {
+    margin-top: 25px;
+}
+
+.menu-price {
+    color: deeppink;
+    font-weight: bold;
+    font-size: 20px;
+}
