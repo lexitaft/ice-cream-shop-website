@@ -4,107 +4,9 @@
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Menu</title>
-  <style>
-    h1 {
-      color: #F0C1ED;
-      font-family:'Arial', sans-serif;
-    }
-    body {
-      background-color: lightgoldenrodyellow;
-      margin: 12px;
-      padding: 6px;
-    }
-    .fontSize{
-      font-size: 30px;
-      color: purple;
-      font-family: cursive;
-    }
-    /*add some basic styling*/
-    table{
-      border-collapse: collapse;
-      width: 100%;
-      margin: 20px auto;
-    }
-    table th, td{
-      border: 1px solid black;
-    }
-    th, td{
-      padding: 10px;
-      text-align: left;
-    }
-    /*hide the dropdown menu by default*/
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 200px;
-      box-shadow: 0px 18px 20px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-      white-space: pre; /*Preserve white space-including line breaks*/
-      padding: 10px;
-      line-height: 25px;
-    }
-    /*style the dropdown button*/
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    /*style the dropdown button*/
-    .dropdown{
-      position: relative;
-      display: inline-block;
-    }
-    .dropdown:hover .dropdown-content{
-      display: block;
-    }
-    .dropdown label {
-      margin-right: 20px;
-      font-size: 30px;
-      font-family: 'cursive';
-    }
 
-    .dropdown-content select:hover,
-    .dropdown-content select:focus {
-      background-color: #ddd;
-    }
-    header {
-      background-color: pink;
-      padding: 10px 0;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    .navbar {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      width: 100%; /* Make the navbar span the whole width */
-    }
-
-    .navbar ul {
-      display: flex;
-      justify-content: center;
-    }
-
-    .navbar li {
-      margin: 0 15px;
-      display: inline;
-    }
-
-    .navbar a {
-      text-decoration: none;
-      color: #ffffcc;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      font-size: 16px;
-      transition: color 0.3s ease;
-    }
-
-    .navbar a:hover {
-      color: purple;
-    }
-  </style>
+    <link rel= "stylesheet" href= "HomeStyles.css">
+ 
 </head>
 <body>
 <header>
@@ -119,89 +21,134 @@
     </nav>
 </header>
 
-<div class="dropdown">
-  <p class="fontSize"> Hover over select item to see menu!</p>
-  <label for="itemSelect">SELECT ITEM:</label>
-  <div class="dropdown-content" id="itemDropdown">
-    <select id= "itemSelect" onchange="showCost(this.value)">
-      <optgroup label="ice cream">
-        <option value= "gratitude_small" data-price = "2" data-description= "lychee ice cream" > gratitude - small </option>
-        <option value="gratitude_medium" data-price = "4" data-description= "lychee ice cream"> gratitude - medium </option>
-        <option value="gratitude_large" data-price = "6" data-description= "lychee ice cream"> gratitude - large </option>
-        <option value= "good_vibes_small" data-price = "2" data-description= "lavender ice cream"> good vibes - small </option>
-        <option value="good vibes_medium" data-price = "4" data-description= "lavender ice cream"> good vibes - medium </option>
-        <option value="good vibes_large" data-price = "6" data-description= "lavender ice cream"> good vibes - large </option>
-        <option value="red roses_small" data-price = "2" data-description= "red rose ice cream"> red roses - small </option>
-        <option value="red roses_medium" data-price = "4" data-description= "red rose ice cream"> red roses - medium </option>
-        <option value="red roses_large" data-price = "6" data-description= "red rose ice cream"> red roses-large </option>
-        <option value="meditate_small" data-price = "2" data-description= "mangosteen ice cream"> meditate - small </option>
-        <option value="meditate_medium" data-price = "4" data-description= "mangosteen ice cream"> meditate - medium </option>
-        <option value="meditate_large" data-price="6" data-description="mangosteen ice cream"> meditate - large </option>
-        <option value="joy_small" data-price="2" data-description="rainbow flavored ice cream"> joy - small </option>
-        <option value="joy_medium" data-price="4" data-description="rainbow flavored ice cream"> joy - medium </option>
-        <option value="joy_large" data-price="6" data-description="rainbow flavored ice cream"> joy - large </option>
-      </optgroup>
-      <optgroup label="bubble tea">
-        <option value="bubble pink_small" data-price="2" data-description="mirabelle flavored bubble tea"> bubble pink - small</option>
-        <option value="bubble pink_medium" data-price="4" data-description="mirabelle flavored bubble tea"> bubble pink - medium</option>
-        <option value="bubble pink_large" data-price="6" data-description="mirabelle flavored bubble tea"> bubble pink- large</option>
-        <option value="euphoria_small" data-price="2" data-description="sunshine flavored bubble tea"> euphoria - small</option>
-        <option value="euphoria_medium" data-price="4" data-description="sunshine flavored bubble tea">euphoria - medium</option>
-        <option value ="euphoria_large" data-price="6" data-description="sunshine flavored bubble tea">euphoria - large</option>
-      </optgroup>
-      <optgroup label="milkshakes">
-        <option value="sweetheart_small" data-price="2" data-description="strawberry milkshake"> sweetheart - small</option>
-        <option value="sweetheart_medium" data-price="4" data-description="strawberry milkshake"> sweetheart - medium</option>
-        <option value="sweetheart_large" data-price="6" data-description="strawberry milkshake"> sweetheart - large</option>
-        <option value="lover_small" data-price="2" data-description="raspberry milkshake"> lover - small</option>
-        <option value="lover_medium" data-price="4" data-description="raspberry milkshake">lover - medium</option>
-        <option value="lover_large" data-price="6" data-description="raspberry milkshake">lover - large</option>
-        <option value="think later_small" data-price="2" data-description="red velvet milkshake"> think later - small</option>
-        <option value="think later_medium" data-price="4" data-description="red velvet milkshake"> think later - medium</option>
-        <option value="think later_large" data-price="6" data-description="red velvet milkshake"> think later - large</option>
-      </optgroup>
-      <optgroup label="frozen yogurt">
-        <option value="kindness_small" data-price="2" data-description="blackberry frozen yogurt"> kindness - small</option>
-        <option value="kindness_medium" data-price="4" data-description="blackberry frozen yogurt"> kindness -  medium</option>
-        <option value="kindness_large" data-price="6" data-description="blackberry frozen yogurt"> kindness - large</option>
-      </optgroup>
-    </select>
-  </div>
+<main>
 
-  <h1>Selected Item Details</h1>
-  <table id="selectedItemTable">
-    <thead>
-    <tr>
-      <th>Item</th>
-      <th>Price</th>
-      <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <!-- table body will be updated dynamically-->
-    </tbody>
-  </table>
-</div>
+    <h1 id="main-heading">Menu</h1>
+
+    <p class= "paragraphStyle">
+        Select a size first, then choose a flavor to view its description and price.
+    </p>
+
+    <div class= "menu-selection">
+        <label for="sizeSelect">Select Size:</label>
+        <label for="sizeSelect">Select Size:</label>
+
+<select id="sizeSelect" onchange="enableFlavor()">
+    <option value="">Choose a size</option>
+    <option value="2">Small - $2.00</option>
+    <option value="4">Medium - $4.00</option>
+    <option value="6">Large - $6.00</option>
+</select>
+
+            <label for="flavorSelect">Select Flavor:</label>
+             <select id="flavorSelect" onchange="showSelection()" disabled>
+
+                <option value="">Choose a flavor</option>
+
+                <optgroup label="Ice Cream">
+                    <option value="Gratitude"
+                            data-description="Lychee ice cream">
+                        Gratitude
+                    </option>
+
+                    <option value="Good Vibes"
+                            data-description="Lavender ice cream">
+                        Good Vibes
+                    </option>
+
+                    <option value="Red Roses"
+                            data-description="Red rose ice cream">
+                        Red Roses
+                    </option>
+
+                    <option value="Meditate"
+                            data-description="Mangosteen ice cream">
+                        Meditate
+                    </option>
+
+                    <option value="Joy"
+                            data-description="Rainbow flavored ice cream">
+                        Joy
+                    </option>
+                </optgroup>
+
+                <optgroup label="Bubble Tea">
+                    <option value="Bubble Pink"
+                            data-description="Mirabelle flavored bubble tea">
+                        Bubble Pink
+                    </option>
+
+                    <option value="Euphoria"
+                            data-description="Sunshine flavored bubble tea">
+                        Euphoria
+                    </option>
+                </optgroup>
+
+                <optgroup label="Milkshakes">
+                    <option value="Sweetheart"
+                            data-description="Strawberry milkshake">
+                        Sweetheart
+                    </option>
+
+                    <option value="Lover"
+                            data-description="Raspberry milkshake">
+                        Lover
+                    </option>
+
+                    <option value="Think Later"
+                            data-description="Red velvet milkshake">
+                        Think Later
+                    </option>
+                </optgroup>
+
+                <optgroup label="Frozen Yogurt">
+                    <option value="Kindness"
+                            data-description="Blackberry frozen yogurt">
+                        Kindness
+                    </option>
+                </optgroup>
+
+            </select>
+            <div id="selectionDetails"></div>
+    </div>
+</main>
 
 <script>
-  function showCost(selectedValue) {
-    let selectedItem = document.querySelector(`[value="${selectedValue}"]`);
-    let price = selectedItem.getAttribute('data-price');
-    let description = selectedItem.getAttribute('data-description');
-    console.log(`Selected Item: ${selectedValue}, Price: ${price}, Description: ${description}`)
+    function enableFlavor() {
+            const sizeSelect = document.getElementById("sizeSelect");
+            const flavorSelect = document.getElementById("flavorSelect");
+
+            if (sizeSelect.value !== "") {
+                flavorSelect.disabled = false;
+            } else {
+                flavorSelect.disabled = true;
+                flavorSelect.value = "";
+                document.getElementById("selectionDetails").innerHTML = "";
+            }
+        }
 
 
-// Update table dynamically
-    let table = document.getElementById('selectedItemTable');
-    let newRow = table.insertRow(table.rows.length);
-    let cell1 = newRow.insertCell(0);
-    let cell2 = newRow.insertCell(1);
-    let cell3 = newRow.insertCell(2);
+        function showSelection() {
+            const sizeSelect = document.getElementById("sizeSelect");
+            const flavorSelect = document.getElementById("flavorSelect");
 
-    cell1.innerHTML = selectedValue;
-    cell2.innerHTML = `${price}`;
-    cell3.innerHTML = description;
-  }
+            const selectedFlavor =
+                flavorSelect.options[flavorSelect.selectedIndex];
+
+            if (flavorSelect.value !== "") {
+
+                const flavor = flavorSelect.value;
+                const description = selectedFlavor.dataset.description;
+                const price = Number(sizeSelect.value).toFixed(2);
+
+                document.getElementById("selectionDetails").innerHTML = `
+                    <h2 class="secondheading">${flavor}</h2>
+                    <p class="paragraphStyle">${description}</p>
+                    <p class="menu-price">$${price}</p>
+                `;
+            }
+        }
 </script>
+
 </body>
-</html>
+</main>
