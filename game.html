@@ -19,7 +19,30 @@
         </ul>
     </nav>
 </header>
-<script>
+
+     <main>
+
+        <h1 id="main-heading">Ice Cream Game</h1>
+
+        <div id="gameContainer"></div>
+
+        <button
+            onmousedown="accelerate(-0.2)"
+            onmouseup="accelerate(0.05)">
+            ACCELERATE
+        </button>
+
+        <p class="paragraphStyle">
+            Use the ACCELERATE button to stay in the air.
+        </p>
+
+        <p class="paragraphStyle">
+            How long can you stay alive?
+        </p>
+
+    </main>
+    
+    <script>
     var myGamePiece;
     var myObstacles= [];
     var myScore;
@@ -138,8 +161,7 @@ function accelerate(n) {
 </script>
 <br>
 <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
-<p>Use the ACCELERATE button to stay in the air</p>
-<p>How long can you stay alive?</p>
+<p>Game created using the code below</p>
 <cite> https://www.w3schools.com/graphics/tryit.asp?filename=trygame_default_gravity</cite>
 </body>
 </html>
